@@ -125,29 +125,20 @@
         <h1>Donate to highland children</h1>
         <p>Your generosity helps us achieve our mission.</p>
     </header>
-    <button onclick="openPopup()">Open Popup</button>
+ 
+    <main>
+            <label for="name">Tên người nhận:</label>
+
+            <label for="amount">Số tiền ủng hộ (VND):</label>
+            <input type="number" id="amount" name="amount" placeholder="Nhập số tiền ủng hộ" required>
+
+   <button onclick="openPopup()">Open Popup</button>
     <div class="overlay" id="overlay" onclick="closePopup()"></div>
     <div class="popup" id="popup">
         <button class="close-btn" onclick="closePopup()">X</button>
         <h2>QR Code</h2>
-        <img src="https://api.vietqr.io/image/970415-47285555555-1KvzC5w.jpg?accountName=PHUNG%20QUOC%20THANG&amount=50000" alt="QR Code">
+        <img src="https://api.vietqr.io/image/970423-00005065191-RXZUNcT.jpg?accountName=DANG%20THI%20THANH%20MAI&amount={amount}&addInfo=Ung%20ho%20tre%20em%20vung%20cao%20VN" alt="QR Code">
     </div>
-    <main>
-        <form id="donation-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="amount">Donation Amount (VND):</label>
-            <input type="number" id="amount" name="amount" placeholder="Enter the donation amount" required>
-
-            <label for="payment-method">Choose Payment Method:</label>
-            <select id="payment-method" name="payment-method">
-                <option value="momo">MoMo</option>
-                <option value="tpbank">TPBank</option>
-            </select>
-
-            <button type="button" id="donate-button">Donate</button>
-        </form>
     </main>
 
     <footer>
